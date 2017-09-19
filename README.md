@@ -36,4 +36,5 @@ Take unlimited quizzes with our beautiful design. No account, no sign in, nothin
 You can also use teacher entrance to create quizzes and share it with your friends.
 
 Website: http://quixlearning.com/
+
 Download: https://play.google.com/store/apps/details?id=com.quix
