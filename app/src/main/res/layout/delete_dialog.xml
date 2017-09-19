@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#ececec"
+        android:padding="5dp"
+        android:layout_height="50dp">
+
+        <utils.TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="24sp"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:textColor="#282828"
+            android:text="@string/delete_title"/>
+
+    </RelativeLayout>
+
+    <utils.TextView
+        android:id="@+id/feedback_text"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        fontify:font="fonts/Gotham-Bold.otf"
+        android:textColor="#282828"
+        android:background="#f9f9f9"
+        android:text="@string/delete_message"/>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#f9f9f9"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/no_btn"
+            android:clickable="true"
+            android:layout_width="@dimen/exit_dialog_btn_width"
+            android:layout_height="@dimen/exit_dialog_btn_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/delete_btn"
+            >
+
+            <utils.TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/buy_btn_textsize"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:textColor="#282828"
+                android:layout_marginTop="10dp"
+                android:text="@string/exit_negative"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/yes_btn"
+            android:clickable="true"
+            android:layout_width="@dimen/exit_dialog_btn_width"
+            android:layout_height="@dimen/exit_dialog_btn_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/delete_btn"
+            >
+
+            <utils.TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/buy_btn_textsize"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:textColor="#282828"
+                android:layout_marginTop="10dp"
+                android:text="@string/exit_positive"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

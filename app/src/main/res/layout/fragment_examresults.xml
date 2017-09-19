@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:weightSum="720">
+
+    <RelativeLayout
+        android:layout_weight="120"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:background="#ececec"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <utils.TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:textColor="#282828"
+            android:textSize="22sp"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="#f9f9f9"
+        />
+    <RelativeLayout
+        android:id="@+id/noresult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="615"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/label_no_exam_result"
+            android:textColor="#ccc"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="615"
+        android:scrollbars="vertical" >
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/itemsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="615"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

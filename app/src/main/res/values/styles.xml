@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="edittext_style_1" >
+
+        <item name= "android:background">@drawable/edittext</item>
+        <item name = "android:textColor">#282828</item>
+        <item name = "android:textColorHint">#d5d2d2</item>
+        <item name="android:padding">6dp</item>
+
+    </style>
+
+</resources>

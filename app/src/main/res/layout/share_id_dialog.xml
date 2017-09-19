@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4ad40e"
+    android:gravity="center_horizontal">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#36ad02"
+        android:padding="5dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_cancel"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+        <utils.TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="24sp"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:textColor="#fff"
+            android:text="@string/share_id"/>
+
+    </RelativeLayout>
+
+    <utils.TextView
+        android:id="@+id/id"
+        android:layout_marginTop="25dp"
+        android:padding="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        fontify:font="fonts/Gotham-Bold.otf"
+        android:textColor="#fff"
+        android:text="Feedback"/>
+
+    <utils.TextView
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        fontify:font="fonts/Gotham-Bold.otf"
+        android:textColor="#fff"
+        android:text="@string/share_id_message"/>
+
+    <Button
+        android:id="@+id/copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copy_clipboard"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/center"
+        android:background="@drawable/next_btn_selector"
+        android:layout_below="@+id/container"
+        android:layout_marginBottom="20dp" />
+
+</LinearLayout>

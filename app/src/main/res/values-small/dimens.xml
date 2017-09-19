@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="login_font_size_title">18sp</dimen>
+    <dimen name="login_font_size_detail">12sp</dimen>
+
+    <dimen name="login_teacher_height">100dp</dimen>
+
+    <dimen name="side_bar_item_height">25dp</dimen>
+    <dimen name="side_bar_text_size">14sp</dimen>
+    <dimen name="side_bar_margin_with_logo">0dp</dimen>
+
+    <dimen name="start_quiz_textsize">30sp</dimen>
+    <dimen name="start_quiz_description_textsize">14sp</dimen>
+
+    <dimen name="quiz_time_icon_dimen">15dp</dimen>
+    <dimen name="quiz_subject_text_size">18sp</dimen>
+    <dimen name="quiz_time_text_size">14sp</dimen>
+    <dimen name="quiz_question_count_text_size">24sp</dimen>
+
+    <dimen name="multiple_test_choice_height">40dp</dimen>
+    <dimen name="multiple_test_choice_selection_textsize">24sp</dimen>
+    <dimen name="multiple_test_choice_answer_textsize">14sp</dimen>
+    <dimen name="multiple_test_margin">3dp</dimen>
+
+    <dimen name="quiz_item_order_textsize">18sp</dimen>
+    <dimen name="quiz_item_other_textsize">13sp</dimen>
+
+</resources>

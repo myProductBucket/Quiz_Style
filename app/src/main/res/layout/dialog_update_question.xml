@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#ececec"
+        android:padding="5dp"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_cancel_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+        <utils.TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|left"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:textColor="#282828"
+            android:text="@string/update_question_text"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#f9f9f9">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:background="#f9f9f9">
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/add_question_hint"
+                    style="@style/edittext_style_1"
+                    />
+
+                <EditText
+                    android:id="@+id/time_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/add_question_feedback"
+                    android:layout_marginTop="10dp"
+                    style="@style/edittext_style_1"
+                    />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#f9f9f9"
+                android:layout_marginBottom="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/add_quiz_btn"
+                    android:clickable="true"
+                    android:layout_width="@dimen/add_quiz_btn_width"
+                    android:layout_height="@dimen/add_quiz_btn_height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/save_quiz_btn"
+                    >
+
+
+
+                    <utils.TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/buy_btn_textsize"
+                        android:layout_centerInParent="true"
+                        fontify:font="fonts/Gotham-Bold.otf"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#fff"
+                        android:text="@string/update_question_text"/>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

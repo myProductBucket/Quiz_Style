@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#ececec"
+        android:padding="5dp"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_cancel_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+        <utils.TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|left"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:textColor="#282828"
+            android:text="@string/add_question_text"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#f9f9f9">
+
+            <TextView
+                android:id="@+id/instruction"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="10sp"
+                android:textColor="#282828"
+                android:gravity="center"
+                android:padding="5dp"
+                android:background="@drawable/text_hint_background"
+                android:text="Yönerge \n Bu soruyu doldururken öncelikli olarak , soru metni ve feedback koymayacağınız sorularda gösterilmesini istediğiniz genel feedbacki koymalısınız. Bu soru türü için yalnızca 1 soru doğru olarak işaretlenebilir. Ayrıca her seçeneğin yanlış cevaplanması sonucunda öğrenciye feedback göstermek için feedback koaybilirsiniz. En az iki adet seçenek en fazla ise 4 adet seçenek girilebilir. Soru kısmını kaydırarak en aşağıda yer alan kaydet butonu ile soruyu kaydedebilirsiniz."/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:background="#f9f9f9">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="12"
+                    android:orientation="horizontal"
+                    >
+                    <EditText
+                        android:id="@+id/name_et"
+                        android:layout_width="0dp"
+                        android:layout_weight="10.5"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/add_question_hint"
+                        style="@style/edittext_style_1"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/add_attachment_btn"
+                        android:clickable="true"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1.5"
+                        >
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_add_image"
+                            android:layout_alignParentRight="true"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/time_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/add_question_feedback"
+                    android:layout_marginTop="10dp"
+                    style="@style/edittext_style_1"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/a_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:background="#f9f9f9">
+
+                    <LinearLayout
+                        android:id="@+id/a_choice_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="12">
+
+                        <utils.TextView
+
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="A"
+                            android:textColor="#FFF"
+                            android:gravity="center"
+                            android:background="#de342b"
+                            android:textSize="@dimen/quiz_item_order_textsize"
+                            fontify:font="fonts/Gotham-Bold.otf"
+                            />
+
+                        <View
+                            android:layout_weight="0.2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/choice_a_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_choice_hint"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/a_match_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="12">
+
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/match_a_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_match_hint"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/a_feedback_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="12">
+
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/feedback_a_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_choice_feedback"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/a_check_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical|right"
+                        android:weightSum="12">
+
+                        <CheckBox
+                            android:id="@+id/a_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#282828"
+                            android:buttonTint="#282828"
+                            android:text="@string/correct_or_not"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/b_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:background="#f9f9f9">
+
+                    <LinearLayout
+                        android:id="@+id/b_choice_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="12">
+
+                        <utils.TextView
+
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="B"
+                            android:textColor="#FFF"
+                            android:gravity="center"
+                            android:background="#de342b"
+                            android:textSize="@dimen/quiz_item_order_textsize"
+                            fontify:font="fonts/Gotham-Bold.otf"
+                            />
+
+                        <View
+                            android:layout_weight="0.2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/choice_b_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_choice_hint"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/b_match_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="12">
+
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/match_b_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_match_hint"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/b_feedback_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="12">
+
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/feedback_b_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_choice_feedback"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/b_check_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical|right"
+                        android:weightSum="12">
+
+                        <CheckBox
+                            android:id="@+id/b_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#282828"
+                            android:buttonTint="#282828"
+                            android:text="@string/correct_or_not"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/c_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:background="#f9f9f9">
+
+                    <LinearLayout
+                        android:id="@+id/c_choice_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="12">
+
+                        <utils.TextView
+
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="C"
+                            android:textColor="#FFF"
+                            android:gravity="center"
+                            android:background="#de342b"
+                            android:textSize="@dimen/quiz_item_order_textsize"
+                            fontify:font="fonts/Gotham-Bold.otf"
+                            />
+
+                        <View
+                            android:layout_weight="0.2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/choice_c_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_choice_hint"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/c_match_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="12">
+
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/match_c_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_match_hint"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/c_feedback_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="12">
+
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/feedback_c_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_choice_feedback"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/c_check_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical|right"
+                        android:weightSum="12">
+
+                        <CheckBox
+                            android:id="@+id/c_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#282828"
+                            android:buttonTint="#282828"
+                            android:text="@string/correct_or_not"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/d_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical"
+                    android:background="#f9f9f9">
+
+                    <LinearLayout
+                        android:id="@+id/d_choice_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="12">
+
+                        <utils.TextView
+
+                            android:layout_weight="0.8"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="D"
+                            android:textColor="#FFF"
+                            android:gravity="center"
+                            android:background="#de342b"
+                            android:textSize="@dimen/quiz_item_order_textsize"
+                            fontify:font="fonts/Gotham-Bold.otf"
+                            />
+
+                        <View
+                            android:layout_weight="0.2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/choice_d_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_choice_hint"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/d_match_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="12">
+
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/match_d_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_match_hint"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/d_feedback_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:weightSum="12">
+
+                        <View
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+                            android:id="@+id/feedback_d_et"
+                            android:layout_weight="11"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/add_choice_feedback"
+                            style="@style/edittext_style_1"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/d_check_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical|right"
+                        android:weightSum="12">
+
+                        <CheckBox
+                            android:id="@+id/d_check"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textColor="#282828"
+                            android:buttonTint="#282828"
+                            android:text="@string/correct_or_not"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#f9f9f9"
+                android:layout_marginBottom="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/add_quiz_btn"
+                    android:clickable="true"
+                    android:layout_width="@dimen/add_quiz_btn_width"
+                    android:layout_height="@dimen/add_quiz_btn_height"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/save_quiz_btn"
+                    >
+
+
+
+                    <utils.TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/buy_btn_textsize"
+                        android:layout_centerInParent="true"
+                        fontify:font="fonts/Gotham-Bold.otf"
+                        android:layout_marginRight="10dp"
+                        android:textColor="#fff"
+                        android:text="@string/save_quiz"/>
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

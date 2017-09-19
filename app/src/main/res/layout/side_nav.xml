@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/side_nav"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#de342b"
+    android:layout_height="match_parent">
+
+    <utils.AspectRatioImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/quix_logo_inside"
+        android:layout_gravity="left"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_drawer_item"
+        android:id="@+id/dashboard_btn"
+        android:clickable="true"
+        android:layout_marginTop="@dimen/side_bar_margin_with_logo"
+        android:padding="7dp">
+
+        <utils.AspectRatioImageView
+            android:layout_width="@dimen/side_bar_item_height"
+            android:layout_height="@dimen/side_bar_item_height"
+            android:src="@drawable/ic_dashboard"
+            android:adjustViewBounds="true"/>
+        <utils.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/side_bar_text_size"
+            android:text="@string/dashboard"
+            fontify:font="fonts/OpenSans-Light.ttf"
+            android:textColor="#fff"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_drawer_item"
+        android:id="@+id/statistics_btn"
+        android:clickable="true"
+        android:padding="7dp">
+
+        <utils.AspectRatioImageView
+            android:layout_width="@dimen/side_bar_item_height"
+            android:layout_height="@dimen/side_bar_item_height"
+            android:src="@drawable/ic_statistics"
+            android:adjustViewBounds="true"/>
+        <utils.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/statistics"
+            android:textSize="@dimen/side_bar_text_size"
+            fontify:font="fonts/OpenSans-Light.ttf"
+            android:textColor="#fff"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_drawer_item"
+        android:id="@+id/results_btn"
+        android:clickable="true"
+        android:visibility="gone"
+        android:padding="7dp">
+
+        <utils.AspectRatioImageView
+            android:layout_width="@dimen/side_bar_item_height"
+            android:layout_height="@dimen/side_bar_item_height"
+            android:src="@drawable/ic_results"
+            android:adjustViewBounds="true"/>
+        <utils.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/results"
+            android:textSize="@dimen/side_bar_text_size"
+            fontify:font="fonts/OpenSans-Light.ttf"
+            android:textColor="#fff"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_drawer_item"
+        android:id="@+id/upgrade_btn"
+        android:clickable="true"
+        android:padding="7dp">
+
+        <utils.AspectRatioImageView
+            android:layout_width="@dimen/side_bar_item_height"
+            android:layout_height="@dimen/side_bar_item_height"
+            android:src="@drawable/ic_upgrade"
+            android:adjustViewBounds="true"/>
+        <utils.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/side_bar_text_size"
+            android:layout_marginLeft="10dp"
+            fontify:font="fonts/OpenSans-Light.ttf"
+            android:text="@string/upgrade"
+            android:textColor="#fff"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_drawer_item"
+        android:id="@+id/share_btn"
+        android:clickable="true"
+        android:padding="7dp">
+
+        <utils.AspectRatioImageView
+            android:layout_width="@dimen/side_bar_item_height"
+            android:layout_height="@dimen/side_bar_item_height"
+            android:src="@drawable/ic_share"
+            android:adjustViewBounds="true"/>
+        <utils.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/side_bar_text_size"
+            fontify:font="fonts/OpenSans-Light.ttf"
+            android:text="@string/share"
+            android:textColor="#fff"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/selector_drawer_item"
+        android:id="@+id/exit_btn"
+        android:clickable="true"
+        android:padding="7dp">
+
+        <utils.AspectRatioImageView
+            android:layout_width="@dimen/side_bar_item_height"
+            android:layout_height="@dimen/side_bar_item_height"
+            android:src="@drawable/ic_exit"
+            android:adjustViewBounds="true"/>
+        <utils.TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/side_bar_text_size"
+            fontify:font="fonts/OpenSans-Light.ttf"
+            android:text="@string/exit"
+            android:textColor="#fff"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

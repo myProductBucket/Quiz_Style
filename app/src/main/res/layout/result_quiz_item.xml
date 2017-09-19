@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:duplicateParentState="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="960"
+        android:gravity="center_vertical"
+        android:background="@drawable/quiz_item_bg"
+        >
+
+        <utils.TextView
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:id="@+id/sira_tv"
+            android:layout_weight="83"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="#282828"
+            android:gravity="center"
+            android:background="#ececec"
+            android:textSize="@dimen/quiz_item_order_textsize"
+            fontify:font="fonts/Gotham-Bold.otf"
+            />
+
+        <utils.TextView
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:id="@+id/isim_tv"
+            android:layout_weight="520"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:paddingLeft="10dp"
+            android:textColor="#282828"
+            android:gravity="center|left"
+            android:textSize="@dimen/quiz_item_other_textsize"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            />
+
+        <RelativeLayout
+            android:id="@+id/share_btn"
+            android:clickable="true"
+            android:layout_weight="175"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/add_quiz_btn_height"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/save_quiz_btn"
+            >
+
+
+
+            <utils.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/buy_btn_textsize"
+                android:layout_centerInParent="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_marginRight="10dp"
+                android:textColor="#fff"
+                android:text="@string/share_list"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/results_btn"
+            android:clickable="true"
+            android:layout_weight="175"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/add_quiz_btn_height"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/save_quiz_btn"
+            >
+
+
+
+            <utils.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/buy_btn_textsize"
+                android:layout_centerInParent="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_marginRight="10dp"
+                android:textColor="#fff"
+                android:text="@string/results"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#f9f9f9" />
+
+</LinearLayout>

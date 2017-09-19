@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Fontify">
+        <attr name="font" format="string" />
+    </declare-styleable>
+
+    <!-- Allows attribute use in an AppTheme definition -->
+    <declare-styleable name="FontifyTheme">
+        <attr name="fontifyStyle" format="reference"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#36ad02"
+        android:padding="5dp"
+        android:layout_height="50dp">
+
+        <utils.TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="24sp"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:textColor="#fff"
+            android:text="@string/free_usage_warning"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#4ad40e"
+        android:layout_height="230dp"
+        android:paddingTop="25dp"
+        android:paddingLeft="25dp">
+
+        <ImageView
+            android:id="@+id/boy"
+            android:layout_width="100dp"
+            android:layout_height="154dp"
+            android:scaleType="fitXY"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_boy"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <utils.TextView
+            android:layout_toLeftOf="@+id/boy"
+            android:id="@+id/buy_text_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:textSize="@dimen/buy_dialog_entry_textsize"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            android:textColor="#164601"
+            android:text="@string/buy_text_1"/>
+
+        <utils.TextView
+            android:layout_toLeftOf="@+id/boy"
+            android:id="@+id/buy_text_2"
+            android:layout_below="@+id/buy_text_1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:textSize="@dimen/buy_dialog_entry_textsize"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            android:textColor="#164601"
+            android:layout_marginTop="10dp"
+            android:text="@string/buy_text_2"/>
+
+        <utils.TextView
+            android:layout_toLeftOf="@+id/boy"
+            android:id="@+id/buy_text_3"
+            android:layout_below="@+id/buy_text_2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:textSize="@dimen/buy_dialog_entry_textsize"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            android:textColor="#164601"
+            android:layout_marginTop="10dp"
+            android:text="@string/buy_text_3"/>
+
+        <RelativeLayout
+            android:id="@+id/not_buy_btn"
+            android:clickable="true"
+            android:layout_width="@dimen/buy_dialog_btn_width"
+            android:layout_height="@dimen/buy_dialog_btn_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/not_buy_btn"
+            >
+
+            <utils.TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/buy_btn_textsize"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:textColor="#fff"
+                android:layout_marginTop="10dp"
+                android:text="@string/buy_negative"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buy_btn"
+            android:clickable="true"
+            android:layout_width="@dimen/buy_dialog_btn_width"
+            android:layout_height="@dimen/buy_dialog_btn_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/not_buy_btn"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/buy_btn"
+            >
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_buy"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"/>
+
+            <utils.TextView
+                android:layout_toRightOf="@+id/icon"
+                android:layout_marginLeft="15dp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/buy_btn_textsize"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:textColor="#fff"
+                android:text="@string/buy_positive"/>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

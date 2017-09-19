@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#f9f9f9">
+
+    <utils.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_quiz"
+        android:textSize="@dimen/start_quiz_textsize"
+        fontify:font="fonts/Gotham-Bold.otf"
+        android:textColor="#282828"/>
+
+    <utils.TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_quiz_desc"
+        android:textSize="@dimen/start_quiz_description_textsize"
+        fontify:font="fonts/OpenSans-Regular.ttf"
+        android:textColor="#282828"/>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:id="@+id/test_id_edittext"
+            android:layout_width="285dp"
+            android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="#282828"
+            android:background="@drawable/edittext"/>
+
+        <ImageView
+            android:id="@+id/go_to_test_btn"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:src="@drawable/green_submitn_btn"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_margin="20dp"/>
+
+</LinearLayout>

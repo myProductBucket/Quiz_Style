@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#36ad02"
+        android:padding="5dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_cancel"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+        <utils.TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textSize="24sp"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:textColor="#fff"
+            android:text="Feedback"/>
+
+    </RelativeLayout>
+
+    <utils.TextView
+        android:id="@+id/feedback_text"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        fontify:font="fonts/Gotham-Bold.otf"
+        android:textColor="#fff"
+        android:background="#4ad40e"
+        android:text="Feedback"/>
+
+</LinearLayout>

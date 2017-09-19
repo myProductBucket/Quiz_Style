@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:weightSum="720">
+
+    <RelativeLayout
+        android:layout_weight="120"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:background="#ececec"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <utils.TextView
+            android:id="@+id/subject_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Fizik Quizi"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:layout_above="@+id/center"
+            android:textColor="#282828"
+            android:textSize="@dimen/quiz_subject_text_size"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:id="@+id/center" />
+        
+        <ImageView
+            android:id="@+id/ic_quiz_time"
+            android:layout_width="@dimen/quiz_time_icon_dimen"
+            android:layout_height="@dimen/quiz_time_icon_dimen"
+            android:src="@drawable/ic_quiz_time"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/center"
+            android:layout_marginTop="3dp"
+            />
+
+        <utils.TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ic_quiz_time"
+            android:text="60:00 min"
+            fontify:font="fonts/OpenSans-Light.ttf"
+            android:textColor="#de342b"
+            android:textSize="@dimen/quiz_time_text_size"
+            android:layout_below="@+id/center"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"/>
+
+        <utils.TextView
+            android:id="@+id/question_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="1/10"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:textColor="#282828"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/quiz_question_count_text_size"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="160"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <utils.AutoResizeTextView
+            android:id="@+id/question_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/attachment"
+            android:gravity="center"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            android:textColor="#282828"
+            android:text="Aşağıdaki soruyu cevaplarken lütfen sakin olunuz !!"/>
+
+
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_attachment"
+            android:scaleType="fitXY"
+            android:id="@+id/attachment"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_weight="440"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/answer_a_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/multiple_test_choice_height"
+            android:orientation="horizontal"
+            android:weightSum="865"
+
+            android:clickable="true"
+            >
+
+            <utils.TextView
+                android:layout_weight="80"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:background="#e44138"
+                android:textColor="#fff"
+                android:text="A"
+                android:gravity="center"
+                android:textSize="@dimen/multiple_test_choice_selection_textsize"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:duplicateParentState="true"
+                />
+
+            <utils.TextView
+                android:id="@+id/answer_a_tv"
+                android:layout_weight="785"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Buda cevap yazacak yerdir"
+                android:gravity="center"
+                android:textSize="@dimen/multiple_test_choice_answer_textsize"
+                fontify:font="fonts/OpenSans-Regular.ttf"
+                android:textColor="#282828"
+                android:background="@drawable/selector_choice"
+                android:duplicateParentState="true"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/multiple_test_margin"
+            android:id="@+id/answer_b_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/multiple_test_choice_height"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:weightSum="865">
+
+            <utils.TextView
+                android:layout_weight="80"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:background="#e44138"
+                android:textColor="#fff"
+                android:text="B"
+                android:gravity="center"
+                android:textSize="@dimen/multiple_test_choice_selection_textsize"
+                fontify:font="fonts/Gotham-Bold.otf"
+                />
+
+            <utils.TextView
+                android:id="@+id/answer_b_tv"
+                android:layout_weight="785"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Buda cevap yazacak yerdir"
+                android:gravity="center"
+                android:textSize="@dimen/multiple_test_choice_answer_textsize"
+                fontify:font="fonts/OpenSans-Regular.ttf"
+                android:textColor="#282828"
+                android:background="@drawable/selector_choice"
+                android:duplicateParentState="true"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/multiple_test_margin"
+            android:clickable="true"
+            android:id="@+id/answer_c_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/multiple_test_choice_height"
+            android:orientation="horizontal"
+            android:weightSum="865">
+
+            <utils.TextView
+                android:layout_weight="80"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:textColor="#fff"
+                android:background="#e44138"
+                android:text="C"
+                android:gravity="center"
+                android:textSize="@dimen/multiple_test_choice_selection_textsize"
+                fontify:font="fonts/Gotham-Bold.otf"
+                />
+
+            <utils.TextView
+                android:id="@+id/answer_c_tv"
+                android:layout_weight="785"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Buda cevap yazacak yerdir"
+                android:gravity="center"
+                android:textSize="@dimen/multiple_test_choice_answer_textsize"
+                fontify:font="fonts/OpenSans-Regular.ttf"
+                android:textColor="#282828"
+                android:background="@drawable/selector_choice"
+                android:duplicateParentState="true"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/multiple_test_margin"
+            android:clickable="true"
+            android:id="@+id/answer_d_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/multiple_test_choice_height"
+            android:orientation="horizontal"
+            android:weightSum="865">
+
+            <utils.TextView
+                android:layout_weight="80"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:textColor="#fff"
+                android:background="#e44138"
+                android:text="D"
+                android:gravity="center"
+                android:textSize="@dimen/multiple_test_choice_selection_textsize"
+                fontify:font="fonts/Gotham-Bold.otf"
+                />
+
+            <utils.TextView
+                android:id="@+id/answer_d_tv"
+                android:layout_weight="785"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Buda cevap yazacak yerdir"
+                android:gravity="center"
+                android:textSize="@dimen/multiple_test_choice_answer_textsize"
+                fontify:font="fonts/OpenSans-Regular.ttf"
+                android:textColor="#282828"
+                android:background="@drawable/selector_choice"
+                android:duplicateParentState="true"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

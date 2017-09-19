@@ -1,0 +1,54 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="login_font_size_title">18sp</dimen>
+    <dimen name="login_font_size_detail">12sp</dimen>
+
+    <dimen name="login_teacher_height">100dp</dimen>
+
+    <dimen name="side_bar_item_height">25dp</dimen>
+    <dimen name="side_bar_text_size">14sp</dimen>
+    <dimen name="side_bar_margin_with_logo">0dp</dimen>
+
+    <dimen name="start_quiz_textsize">30sp</dimen>
+    <dimen name="start_quiz_description_textsize">14sp</dimen>
+
+    <dimen name="quiz_time_icon_dimen">15dp</dimen>
+    <dimen name="quiz_subject_text_size">16sp</dimen>
+    <dimen name="quiz_time_text_size">14sp</dimen>
+    <dimen name="quiz_question_count_text_size">24sp</dimen>
+
+    <dimen name="multiple_test_choice_height">40dp</dimen>
+    <dimen name="multiple_test_choice_selection_textsize">24sp</dimen>
+    <dimen name="multiple_test_choice_answer_textsize">14sp</dimen>
+    <dimen name="multiple_test_margin">3dp</dimen>
+
+    <dimen name="attention_textsize">10sp</dimen>
+
+    <dimen name="matching_answer_textsize">12sp</dimen>
+
+    <dimen name="report_button_width">150dp</dimen>
+
+    <dimen name="statistics_values_textsize">34sp</dimen>
+    <dimen name="statistics_titles_textsize">12sp</dimen>
+
+    <dimen name="buy_dialog_entry_textsize">16sp</dimen>
+    <dimen name="buy_btn_textsize">16sp</dimen>
+
+    <dimen name="buy_dialog_btn_height">37dp</dimen>
+    <dimen name="buy_dialog_btn_width">155dp</dimen>
+
+    <dimen name="exit_dialog_entry_textsize">16sp</dimen>
+    <dimen name="exit_btn_textsize">16sp</dimen>
+
+    <dimen name="exit_dialog_btn_height">40dp</dimen>
+    <dimen name="exit_dialog_btn_width">209dp</dimen>
+
+    <dimen name="add_quiz_btn_height">40dp</dimen>
+    <dimen name="add_quiz_btn_width">130dp</dimen>
+
+    <dimen name="add_question_btn_width">160dp</dimen>
+
+</resources>

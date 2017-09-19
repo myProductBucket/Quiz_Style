@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fontify="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_marginBottom="2dp"
+    android:layout_height="wrap_content"
+    >
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        card_view:cardElevation="3dp"
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dp">
+
+            <utils.TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ogrenci Adi"
+                android:textColor="#282828"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_centerHorizontal="true"/>
+
+            <utils.TextView
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="445 second"
+                android:textColor="#282828"
+                android:gravity="center"
+                android:layout_below="@+id/name_tv"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_centerHorizontal="true"/>
+
+            <utils.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="score"
+                android:textColor="#282828"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:padding="5dp"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_above="@+id/correct_tv"
+                android:layout_toLeftOf="@+id/puan_count_tv"
+                android:layout_toStartOf="@+id/puan_count_tv" />
+
+            <utils.TextView
+                android:id="@+id/correct_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 / 5 correct"
+                android:textColor="#282828"
+                android:gravity="center"
+                android:layout_below="@+id/time_tv"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/results_btn"
+                android:layout_width="@dimen/report_button_width"
+                android:layout_height="wrap_content"
+                android:text="Results"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/center"
+                android:background="@drawable/next_btn_selector"
+                android:layout_below="@+id/container"/>
+
+            <utils.TextView
+                android:id="@+id/puan_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="88"
+                android:textColor="#282828"
+                android:gravity="bottom"
+                android:textSize="64sp"
+                android:layout_above="@+id/results_btn"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

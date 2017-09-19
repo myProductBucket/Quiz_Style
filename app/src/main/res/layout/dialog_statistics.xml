@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="#ececec"
+        android:padding="5dp"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_cancel_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"/>
+
+        <utils.TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|left"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:textSize="20sp"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:textColor="#282828"
+            android:text="@string/statistics"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:background="#f9f9f9"
+           android:paddingLeft="15dp"
+           android:paddingBottom="15dp">
+
+           <utils.TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/quiz_stats"
+               android:textSize="20sp"
+               android:textColor="#282828"
+               android:layout_marginTop="15dp"
+               fontify:font="fonts/Gotham-Bold.otf"
+               />
+
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="15dp"
+               android:weightSum="2">
+
+               <utils.TextView
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="@string/stats_average_score"
+                   android:textSize="16sp"
+                   android:textColor="#282828"
+                   fontify:font="fonts/OpenSans-Light.ttf"
+                   />
+
+               <utils.TextView
+                   android:id="@+id/average_score"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:textSize="16sp"
+                   android:textColor="#de342b"
+                   android:gravity="center"
+                   fontify:font="fonts/OpenSans-Semibold.ttf"
+                   />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="15dp"
+               android:weightSum="2">
+
+               <utils.TextView
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="@string/stats_average_time"
+                   android:textSize="16sp"
+                   android:textColor="#282828"
+                   fontify:font="fonts/OpenSans-Light.ttf"
+                   />
+
+               <utils.TextView
+                   android:id="@+id/average_time"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:textSize="16sp"
+                   android:textColor="#de342b"
+                   android:gravity="center"
+                   fontify:font="fonts/OpenSans-Semibold.ttf"
+                   />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="15dp"
+               android:weightSum="2">
+
+               <utils.TextView
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="@string/stats_average_student"
+                   android:textSize="16sp"
+                   android:textColor="#282828"
+                   fontify:font="fonts/OpenSans-Light.ttf"
+                   />
+
+               <utils.TextView
+                   android:id="@+id/quiz_taken"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:textSize="16sp"
+                   android:textColor="#de342b"
+                   android:gravity="center"
+                   fontify:font="fonts/OpenSans-Semibold.ttf"
+                   />
+
+           </LinearLayout>
+
+           <utils.TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/question_stats"
+               android:textSize="20sp"
+               android:textColor="#282828"
+               android:layout_marginTop="15dp"
+               fontify:font="fonts/Gotham-Bold.otf"
+               />
+
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="15dp"
+               android:weightSum="2">
+
+               <utils.TextView
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="@string/first_try_percentage"
+                   android:textSize="16sp"
+                   android:textColor="#282828"
+                   fontify:font="fonts/OpenSans-Light.ttf"
+                   />
+
+               <utils.TextView
+                   android:id="@+id/first_try"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:textSize="16sp"
+                   android:textColor="#de342b"
+                   android:gravity="center"
+                   fontify:font="fonts/OpenSans-Semibold.ttf"
+                   />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="15dp"
+               android:weightSum="2">
+
+               <utils.TextView
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="@string/second_try_percentage"
+                   android:textSize="16sp"
+                   android:textColor="#282828"
+                   fontify:font="fonts/OpenSans-Light.ttf"
+                   />
+
+               <utils.TextView
+                   android:id="@+id/second_try"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:textSize="16sp"
+                   android:textColor="#de342b"
+                   android:gravity="center"
+                   fontify:font="fonts/OpenSans-Semibold.ttf"
+                   />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="15dp"
+               android:weightSum="2">
+
+               <utils.TextView
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:text="@string/third_try_percentage"
+                   android:textSize="16sp"
+                   android:textColor="#282828"
+                   fontify:font="fonts/OpenSans-Light.ttf"
+                   />
+
+               <utils.TextView
+                   android:id="@+id/third_try"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:textSize="16sp"
+                   android:textColor="#de342b"
+                   android:gravity="center"
+                   fontify:font="fonts/OpenSans-Semibold.ttf"
+                   />
+
+           </LinearLayout>
+
+           <utils.TextView
+               android:id="@+id/teacher_feedback"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:text="@string/teacher_feedback_normal"
+               android:padding="5dp"
+               android:textSize="16sp"
+               android:layout_marginRight="15dp"
+               android:textColor="#89ca2c"
+               android:layout_marginTop="15dp"
+               fontify:font="fonts/Gotham-Bold.otf"
+               android:gravity="center"
+               />
+
+           <utils.TextView
+               android:id="@+id/teacher_feedback_go_url"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:text="@string/more_infromation"
+               android:layout_marginRight="15dp"
+               android:padding="5dp"
+               android:textSize="16sp"
+               android:textColor="#282828"
+               android:layout_marginTop="15dp"
+               fontify:font="fonts/Gotham-Bold.otf"
+               android:gravity="center"
+               android:clickable="true"
+               />
+
+       </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

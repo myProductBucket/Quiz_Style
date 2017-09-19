@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fontify="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_marginBottom="2dp"
+    android:layout_height="wrap_content"
+    >
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="3dp"
+        card_view:cardBackgroundColor="#fff"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dp">
+
+            <utils.TextView
+                android:id="@+id/question_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hangisi programlama dilidir ? Nedenlerini sıralayınız Hangisi programlama dilidir ? Nedenlerini sıralayınız"
+                android:layout_toLeftOf="@+id/is_correct_iv"
+                android:textColor="#282828"
+                android:gravity="left"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:id="@+id/sep1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/question_tv"
+                android:layout_toLeftOf="@+id/is_correct_iv"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="10dp"
+                android:background="#ccc" />
+
+            <utils.TextView
+                android:id="@+id/correct_ans_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doğru Cevap : Html , CSS, Php"
+                android:textColor="#282828"
+                android:gravity="center"
+                android:layout_below="@+id/sep1"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:id="@+id/sep2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/correct_ans_tv"
+                android:layout_margin="3dp"
+                android:background="#ccc" />
+
+            <utils.TextView
+                android:id="@+id/first_ans_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="İlk Cevap : Html, CSS"
+                android:textColor="#282828"
+                android:gravity="center"
+                android:layout_below="@+id/sep2"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:id="@+id/sep3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/first_ans_tv"
+                android:layout_margin="3dp"
+                android:background="#ccc" />
+
+            <utils.TextView
+                android:id="@+id/which_try_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct answer on which try : 3"
+                android:textColor="#282828"
+                android:gravity="center"
+                android:layout_below="@+id/sep3"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentLeft="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/is_correct_iv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_correct"
+                android:layout_alignParentTop="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>

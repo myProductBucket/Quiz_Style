@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingPrefix"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:weightSum="720"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_weight="420"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:weightSum="1280">
+
+        <LinearLayout
+            android:onClick="toStudentDashboard"
+            android:layout_weight="450"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:layout_marginRight="10dp"
+            android:background="?android:attr/selectableItemBackground"
+
+            android:gravity="center_horizontal">
+
+            <utils.AspectRatioImageView
+                android:layout_weight="195"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_entrance_student"
+                />
+
+            <utils.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_entrance_student"
+                android:layout_marginTop="8dp"
+                android:textColor="#fff"
+                android:textSize="@dimen/login_font_size_title"
+                fontify:font="fonts/Gotham-Bold.otf"
+                 />
+
+            <utils.TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/login_entrance_student_detail"
+                fontify:font="fonts/OpenSans-Light.ttf"
+                android:textColor="#fff"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/login_font_size_detail"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:onClick="toTeacherLogin"
+            android:layout_weight="450"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:layout_marginLeft="10dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal">
+
+            <utils.AspectRatioImageView
+                android:layout_weight="195"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_entrance_teacher"
+                />
+
+            <utils.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_entrance_teacher"
+                android:textColor="#fff"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/login_font_size_title"
+                />
+
+            <utils.TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/login_entrance_teacher_detail"
+                android:textColor="#fff"
+                fontify:font="fonts/OpenSans-Light.ttf"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/login_font_size_detail"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

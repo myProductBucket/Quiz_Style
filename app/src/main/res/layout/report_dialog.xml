@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto">
+
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:padding="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/report_bg"
+        android:layout_marginTop="15dp">
+
+        <utils.TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textColor="#77100b"
+            android:gravity="center"
+            android:textSize="21sp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:layout_centerHorizontal="true"/>
+
+        <utils.TextView
+            android:id="@+id/correct_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/count_text"
+            android:textColor="#f9f9f9"
+            android:gravity="center"
+            android:textSize="18sp"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            android:layout_below="@+id/name_tv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <utils.TextView
+            android:id="@+id/correct_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="14"
+            android:textColor="#f9f9f9"
+            android:gravity="center"
+            android:textSize="18sp"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            android:layout_below="@+id/name_tv"
+            android:layout_toRightOf="@+id/correct_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <utils.TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/time_text"
+            android:textColor="#f9f9f9"
+            android:gravity="center"
+            android:textSize="18sp"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            android:layout_below="@+id/correct_tv"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <utils.TextView
+            android:id="@+id/time_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="09:24"
+            android:textColor="#f9f9f9"
+            android:gravity="center"
+            android:textSize="18sp"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            android:layout_below="@+id/correct_tv"
+            android:layout_toRightOf="@+id/correct_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <utils.AutoResizeTextView
+            android:id="@+id/puan_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/point_text"
+            android:textColor="#f9f9f9"
+            android:gravity="center"
+            android:textSize="18sp"
+            fontify:font="fonts/OpenSans-Semibold.ttf"
+            android:layout_below="@+id/puan_count_tv"
+            android:layout_alignLeft="@+id/puan_count_tv"
+            android:layout_alignRight="@+id/puan_count_tv"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-15dp"
+            />
+
+        <utils.TextView
+            android:id="@+id/puan_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="88"
+            android:textColor="#f9f9f9"
+            android:gravity="bottom"
+            android:textSize="64sp"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"/>
+
+
+    </RelativeLayout>
+
+    <utils.TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Phsyic Quiz"
+        android:textColor="#f9f9f9"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="@drawable/title_bg"
+        fontify:font="fonts/Gotham-Bold.otf"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/share_btn"
+        android:layout_width="@dimen/report_button_width"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:layout_toLeftOf="@+id/center"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/share_btn"
+        android:layout_below="@+id/container"/>
+
+    <Button
+        android:id="@+id/finish_btn"
+        android:layout_width="@dimen/report_button_width"
+        android:layout_height="wrap_content"
+        android:text="Complete"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/center"
+        android:background="@drawable/next_btn"
+        android:layout_below="@+id/container"/>
+
+</RelativeLayout>

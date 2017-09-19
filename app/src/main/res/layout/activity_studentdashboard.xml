@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:weightSum="1280"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/side_nav"
+        android:layout_weight="320"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:layout_weight="960"
+        android:id="@+id/content_frame"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <dimen name="activity_horizontal_margin">64dp</dimen>
+
+    <dimen name="login_font_size_title">35sp</dimen>
+    <dimen name="login_font_size_detail">18sp</dimen>
+
+    <dimen name="login_teacher_height">150dp</dimen>
+
+    <dimen name="side_bar_item_height">50dp</dimen>
+    <dimen name="side_bar_text_size">24sp</dimen>
+    <dimen name="side_bar_margin_with_logo">15dp</dimen>
+
+    <dimen name="start_quiz_textsize">34sp</dimen>
+    <dimen name="start_quiz_description_textsize">18sp</dimen>
+
+    <dimen name="quiz_time_icon_dimen">25dp</dimen>
+    <dimen name="quiz_subject_text_size">20sp</dimen>
+    <dimen name="quiz_time_text_size">17sp</dimen>
+    <dimen name="quiz_question_count_text_size">24sp</dimen>
+
+    <dimen name="multiple_test_choice_height">45dp</dimen>
+    <dimen name="multiple_test_choice_selection_textsize">28sp</dimen>
+    <dimen name="multiple_test_choice_answer_textsize">18sp</dimen>
+    <dimen name="multiple_test_margin">4dp</dimen>
+
+    <dimen name="attention_textsize">12sp</dimen>
+
+    <dimen name="matching_answer_textsize">14sp</dimen>
+
+    <dimen name="report_button_width">150dp</dimen>
+
+    <dimen name="statistics_values_textsize">42sp</dimen>
+    <dimen name="statistics_titles_textsize">20sp</dimen>
+
+    <dimen name="buy_dialog_entry_textsize">20sp</dimen>
+    <dimen name="buy_btn_textsize">20sp</dimen>
+
+    <dimen name="buy_dialog_btn_height">59dp</dimen>
+    <dimen name="buy_dialog_btn_width">250dp</dimen>
+
+    <dimen name="exit_dialog_entry_textsize">20sp</dimen>
+    <dimen name="exit_btn_textsize">20sp</dimen>
+
+    <dimen name="exit_dialog_btn_height">40dp</dimen>
+    <dimen name="exit_dialog_btn_width">209dp</dimen>
+
+    <dimen name="add_quiz_btn_height">45dp</dimen>
+    <dimen name="add_quiz_btn_width">150dp</dimen>
+
+
+
+</resources>

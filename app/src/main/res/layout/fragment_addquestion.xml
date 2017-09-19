@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fontify="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:weightSum="720">
+
+    <RelativeLayout
+        android:layout_weight="120"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:background="#ececec"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <utils.TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Fizik Quizi"
+            fontify:font="fonts/Gotham-Bold.otf"
+            android:layout_above="@+id/center"
+            android:textColor="#282828"
+            android:textSize="@dimen/quiz_subject_text_size"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:id="@+id/center" />
+        
+        <ImageView
+            android:id="@+id/ic_quiz_time"
+            android:layout_width="@dimen/quiz_time_icon_dimen"
+            android:layout_height="@dimen/quiz_time_icon_dimen"
+            android:src="@drawable/ic_quiz_time"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/center"
+            android:layout_marginTop="3dp"
+            />
+
+        <utils.TextView
+            android:id="@+id/quiz_count_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ic_quiz_time"
+            android:text="60:00 min"
+            fontify:font="fonts/OpenSans-Light.ttf"
+            android:textColor="#de342b"
+            android:textSize="@dimen/quiz_time_text_size"
+            android:layout_below="@+id/center"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/add_question_btn"
+            android:clickable="true"
+            android:layout_width="@dimen/add_question_btn_width"
+            android:layout_height="@dimen/add_quiz_btn_height"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/save_quiz_btn"
+            >
+
+
+
+            <utils.TextView
+                android:layout_toRightOf="@+id/icon"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/buy_btn_textsize"
+                android:layout_centerInParent="true"
+                fontify:font="fonts/Gotham-Bold.otf"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/add_ic"
+                android:textColor="#fff"
+                android:text="@string/add_question_text"/>
+
+            <ImageView
+                android:id="@+id/add_ic"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_add"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="#f9f9f9"
+        />
+
+    <RelativeLayout
+        android:id="@+id/noresult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="615"
+        android:scrollbars="vertical"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/label_add_first_question"
+            android:textColor="#ccc"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="615"
+        android:scrollbars="vertical" >
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/itemsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="615"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_share"
+        fab:fab_colorNormal="#de342b"
+        fab:fab_colorPressed="#ad1a11"
+        fab:fab_colorRipple="#ad1a11" />
+
+</RelativeLayout>
